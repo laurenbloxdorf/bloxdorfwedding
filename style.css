@@ -1,0 +1,430 @@
+/* ============================================
+   Wedding Site — Shared Styles
+   Palette:
+     Ivory background : #FAF7F1
+     Charcoal text     : #2E2B26
+     Sage accent       : #7A8471
+     Brass line        : #B8935F
+   Type:
+     Display serif : 'Cormorant Garamond'
+     Script accent : 'Mrs Saint Delafield'
+     Nav / labels   : 'Jost'
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Mrs+Saint+Delafield&family=Jost:wght@400;500&display=swap');
+
+:root {
+  --ivory: #FAF7F1;
+  --ivory-deep: #F1ECE2;
+  --charcoal: #2E2B26;
+  --charcoal-soft: #5C574D;
+  --sage: #7A8471;
+  --brass: #B8935F;
+  --white: #FFFFFF;
+  --max-width: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Header / Nav ---------- */
+
+header.site-header {
+  padding: 28px 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+.monogram {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--charcoal-soft);
+  margin: 0 0 18px;
+}
+
+nav.primary-nav {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  flex-wrap: wrap;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  border-top: 1px solid rgba(46,43,38,0.14);
+  padding-top: 16px;
+  margin-top: 6px;
+}
+
+nav.primary-nav a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  color: var(--charcoal-soft);
+}
+
+nav.primary-nav a:hover,
+nav.primary-nav a.active {
+  color: var(--charcoal);
+  border-bottom-color: var(--brass);
+}
+
+.nav-toggle {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 26px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--charcoal);
+}
+
+/* ---------- Hero (home page only) ---------- */
+
+.hero {
+  text-align: center;
+  padding: 56px 0 40px;
+}
+
+.hero .kicker {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: 0.3em;
+  color: var(--charcoal-soft);
+}
+
+.hero .script-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 6px 0 4px;
+}
+
+.hero .script-line span.plain {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: 0.3em;
+  color: var(--charcoal-soft);
+}
+
+.hero .script {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 84px;
+  line-height: 1;
+  color: var(--charcoal);
+}
+
+.hero .names {
+  font-size: 54px;
+  letter-spacing: 0.06em;
+  margin: 18px 0 12px;
+  font-weight: 500;
+}
+
+.hero .details {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--charcoal-soft);
+  line-height: 1.9;
+}
+
+.hero .countdown {
+  margin-top: 6px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--sage);
+}
+
+/* ---------- Hero image ---------- */
+
+.hero-photo {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+/* ---------- Intro / body sections ---------- */
+
+.section {
+  padding: 64px 0;
+}
+
+.section.alt {
+  background: var(--ivory-deep);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 15px;
+  will-change: auto;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin: 0 0 6px;
+}
+
+.section .subtitle {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--charcoal-soft);
+  margin-bottom: 36px;
+}
+
+.divider {
+  width: 44px;
+  height: 1px;
+  background: var(--brass);
+  margin: 22px auto;
+  border: none;
+}
+
+.prose {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  color: var(--charcoal-soft);
+}
+
+/* ---------- Cards / grid for Travel, Things to Do, Wedding Party ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  margin-top: 12px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.grid-item h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  letter-spacing: 0.02em;
+}
+
+.grid-item p {
+  font-size: 17px;
+  color: var(--charcoal-soft);
+  margin: 0;
+}
+
+/* ---------- Timeline (Our Story / Schedule) ---------- */
+
+.timeline {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(46,43,38,0.12);
+}
+
+.timeline-item:first-child { border-top: none; }
+
+.timeline-time {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  padding-top: 4px;
+}
+
+.timeline-item h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--charcoal-soft);
+}
+
+/* ---------- Photo gallery ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* ---------- Registry ---------- */
+
+.registry-list {
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.registry-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(46,43,38,0.16);
+  padding: 20px 26px;
+}
+
+.registry-item span {
+  font-size: 21px;
+}
+
+.registry-item a {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  border-bottom: 1px solid var(--sage);
+  padding-bottom: 2px;
+}
+
+/* ---------- RSVP form ---------- */
+
+.rsvp-form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.rsvp-form label {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--charcoal-soft);
+  margin-bottom: 6px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  border: 1px solid rgba(46,43,38,0.25);
+  background: var(--white);
+  color: var(--charcoal);
+}
+
+.rsvp-form button {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  padding: 14px 20px;
+  background: var(--charcoal);
+  color: var(--ivory);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.rsvp-form button:hover { background: var(--sage); }
+
+.rsvp-note {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: var(--charcoal-soft);
+  max-width: 480px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  text-align: center;
+  padding: 40px 0 50px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--charcoal-soft);
+  border-top: 1px solid rgba(46,43,38,0.12);
+  margin-top: 20px;
+}
+
+footer.site-footer .footer-script {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 28px;
+  color: var(--charcoal);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 720px) {
+  .hero .script { font-size: 56px; }
+  .hero .names { font-size: 36px; }
+  nav.primary-nav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  nav.primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+}
