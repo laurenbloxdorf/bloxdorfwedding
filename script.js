@@ -1,5 +1,5 @@
 // ---- Set your wedding date/time here (local time) ----
-const WEDDING_DATE = new Date('2027-08-12T14:00:00');
+const WEDDING_DATE = new Date('2027-08-13T14:00:00');
 
 function updateCountdown() {
   const el = document.getElementById('countdown');
